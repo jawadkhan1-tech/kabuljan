@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1A1814;
+  --color-secondary: #0A0908;
+  --color-background: #F7F1E5;
+  --color-card: #FFF9EF;
+  --color-accent: #C7A35A;
+  --color-cultural: #7A2638;
+  --color-text: #202020;
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+:root {
+  --background: #F7F1E5;
+  --foreground: #202020;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  /* Prevent horizontal scroll issues with animations */
+  overflow-x: hidden; 
+}
+
+/* Custom patterns and glassmorphism */
+.pattern-bg {
+  background-image: radial-gradient(var(--color-accent) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+}
+
+.text-cultural {
+  font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(26, 24, 20, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gold text gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #E5C07B 0%, #C7A35A 50%, #A68037 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
