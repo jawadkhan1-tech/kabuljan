@@ -120,19 +120,24 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navbar (Floating 3 Dots) */}
-        <div className="md:hidden absolute left-4 top-0">
+        {/* Mobile Navbar (Mockup Style) */}
+        <div className="md:hidden absolute left-0 right-0 top-0 px-6 flex justify-between items-center w-full">
+          {/* Top Left: Golden Mandala Icon */}
+          <div className="text-[#D4A853]">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+              <path d="M12 2L14.5 9L21.5 12L14.5 15L12 22L9.5 15L2.5 12L9.5 9L12 2Z" strokeLinejoin="round" />
+              <path d="M12 5L13.5 10.5L19 12L13.5 13.5L12 19L10.5 13.5L5 12L10.5 10.5L12 5Z" strokeLinejoin="round" opacity="0.5" />
+              <circle cx="12" cy="12" r="2.5" />
+            </svg>
+          </div>
+
+          {/* Top Right: Hamburger Menu */}
           <button 
-            className="flex items-center justify-center p-3 bg-[#1A1814]/80 backdrop-blur-md border border-[#E5C07B]/30 shadow-lg rounded-full text-white hover:text-[#E5C07B] transition-colors"
+            className="flex items-center justify-center w-10 h-10 border border-[#E5C07B]/40 rounded-full text-white/90 hover:text-[#E5C07B] hover:border-[#E5C07B] transition-colors bg-[#0A0908]/30 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
-            {/* 3 Dots Icon (MoreVertical style) */}
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="5" r="2"/>
-              <circle cx="12" cy="12" r="2"/>
-              <circle cx="12" cy="19" r="2"/>
-            </svg>
+            <Menu strokeWidth={1.2} className="w-5 h-5" />
           </button>
         </div>
       </motion.header>

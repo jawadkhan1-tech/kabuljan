@@ -28,10 +28,16 @@ export function SignatureDishes() {
   ];
 
   return (
-    <section className="relative w-full aspect-[16/9] min-h-[800px] flex items-center justify-center">
-      {/* Background Image */}
+    <section className="relative w-full md:aspect-[16/9] min-h-[800px] flex items-center justify-center py-20 md:py-0">
+      {/* Mobile Background Image */}
       <div 
-        className="absolute inset-0 w-full h-full bg-[#0A0908] bg-contain lg:bg-cover bg-top lg:bg-center bg-no-repeat z-0"
+        className="absolute inset-0 w-full h-full bg-[#0A0908] bg-cover bg-center bg-no-repeat z-0 md:hidden"
+        style={{ backgroundImage: "url('/page3_phone_size_bg.png')" }}
+      />
+      
+      {/* Desktop Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-[#0A0908] bg-cover bg-center bg-no-repeat z-0 hidden md:block"
         style={{ backgroundImage: "url('/page3_bg_final.png')" }}
       />
 
