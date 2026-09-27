@@ -25,18 +25,17 @@ export function Footer() {
 
   return (
     <footer className="relative w-full bg-[#050505] min-h-[600px] md:min-h-[800px] flex flex-col justify-end pb-[10%] xl:pb-[5%] pt-10">
-      {/* Background Image constrained to max-w-[1400px] to perfectly match the grid on wide screens */}
-      <div className="absolute inset-0 w-full h-full flex justify-center z-0 pointer-events-none">
+      {/* Full-width Background Image */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <div 
-          className="w-full max-w-[1400px] h-full bg-contain lg:bg-[length:100%_auto] bg-top bg-no-repeat bg-[url('/footer_phone_size_bg.png')] md:bg-[url('/footer_bg.png')]"
+          className="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/footer_phone_size_bg.png')] md:bg-[url('/footer_bg.png')]"
         />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-[1400px] flex flex-col h-full">
         
-        {/* Transparent grid to hold the review text over the drawn boxes */}
-        {/* pt-[28%] uses percentage to scale perfectly with the 1400px background image width */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 mb-24 pt-[15vw] md:pt-[25%] lg:pt-[26%] xl:pt-[29%]">
+        {/* Premium review cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 mb-24 pt-[15vw] md:pt-[15%]">
           {reviews.map((review, index) => (
             <motion.div 
               key={index} 
@@ -44,7 +43,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="flex flex-col items-center justify-center text-center px-4 lg:px-8 py-8 lg:py-0 bg-black/40 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none rounded-2xl lg:rounded-none border border-[#E5C07B]/10 lg:border-none"
+              className="flex flex-col items-center justify-center text-center px-6 py-10 lg:px-10 lg:py-12 bg-black/60 backdrop-blur-md rounded-2xl border border-[#E5C07B]/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#E5C07B]/40 hover:shadow-[0_8px_32px_rgba(229,192,123,0.1)] transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6 text-[#E5C07B]">
